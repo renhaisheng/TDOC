@@ -1,15 +1,13 @@
-# TDOC
-Automated thermdyamic data generation
-
 TDOC: Thermodynamic Data Offline Calculator. 
-Date: July 18, 2022.
+Date: March 20,2022.
 Author: Huajie Xu, Zihan Xu, Lu Liu, Zerong Li, Quan Zhu, Haisheng Ren.
 Email: renhs@scu.edu.cn.
 Copyright: Center for Combustion Dynamics, Sichuan University.
 
 ## Characteristic:
 This program of TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy at CCSD(T)/CBS level with corrections of BAC. 
-TDOC can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
+TDOC can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors 
+are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
 
 
 ## Directories:
@@ -26,9 +24,13 @@ TDOC can automatically build input files and deal with occurred errors, such as 
 
 Install software and add channel to environment variables on Windows platforms.
 1. Obtain conda by Anaconda or Miniconda (https://docs.conda.io/en/latest/) where the Python version is greater than 3.7.
+2. Install OpenBabel 3.1 from from GitHub (https://github.com/openbabel/openbabel/releases/).
+3. Keep python3.2 in your shell if you want use Chemscript to generate conformers. The Chemscript is optional since confomers can also be built by OpenBabel or RdKit.
 
 The required modules are rdkit, utilspie, ase.
-1. Use "conda" or "pip" command to install any vacant module.
+1. Type "conda install -c rdkit rdkit" or "conda install -c conda-forge rdkit" to obtain rdkit.
+2. Input "pip install utilspie ase" to install utilspie and ase modules.
+3. Use "conda" or "pip" command to install any vacant module.
 
 Install essential packages in Linux platforms for high performance computing.
 1. For M062X calculations, the Gaussian of g09 or g16 is required. You can change the  default word of "g09" to "g16" in submit.py file if you have Gaussian copyright of g16 version.  

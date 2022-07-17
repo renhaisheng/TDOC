@@ -1,0 +1,17 @@
+***,[H][H]
+nosym
+geometry={
+H        0.000000        0.000000        0.370138
+H        0.000000        0.000000       -0.370138
+}
+
+basis=vdz
+{hf;occ,1;wf,2,1,0,state,1}
+ccsd(t)
+
+basis=vtz
+hf
+ccsd(t)
+
+basis=vqz
+hf

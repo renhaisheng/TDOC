@@ -1,0 +1,6 @@
+rdkit
+ase
+scipy
+numpy
+utilspie
+openbabel==3.1.1

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for s in *.sh;
+do
+  dos2unix $s
+  qsub $s
+done
+

@@ -1,0 +1,369 @@
+ 
+       ==============================================
+       |                                            |
+       |                 C R E S T                  |
+       |                                            |
+       |  Conformer-Rotamer Ensemble Sampling Tool  |
+       |          based on the GFN methods          |
+       |             P.Pracht, S.Grimme             |
+       |          Universitaet Bonn, MCTC           |
+       ==============================================
+       Version 2.11, Tue 9. Feb 11:37:45 CEST 2021
+  Using the xTB program. Compatible with xTB version 6.4.0
+ 
+   Cite work conducted with this code as
+
+   P. Pracht, F. Bohle, S. Grimme, PCCP, 2020, 22, 7169-7192.
+
+   and  S. Grimme, JCTC, 2019, 15, 2847-2862.
+ 
+   with help from:
+   F.Bohle, S.Ehlert, S.Grimme, P.Pracht
+ 
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+ Command line input:
+ > crest [CH2]-T.xyz -gfnff -v4 -quick -ewin 50 -T 8 -chrg 0 -uhf 2
+
+  -v4 : iMTD-sMTD
+  -gfnff : Use of GFN-FF requested.
+  -ewin 50
+  -T 8 (CPUs/Threads selected)
+  -chrg 0
+  -uhf 2
+ 
+ -------------------------
+ xTB Geometry Optimization
+ -------------------------
+ Geometry successfully optimized.
+ 
+------------------------------------------------
+Generating MTD length from a flexibility measure
+------------------------------------------------
+ Calculating WBOs... done.
+ Calculating NCI flexibility... done.
+     covalent flexibility measure :   0.000
+ non-covalent flexibility measure :   0.975
+ flexibility measure :   0.000
+ t(MTD) / ps    :     2.5
+ Σ(t(MTD)) / ps :    15.0 (6 MTDs)
+ 
+-------------------------------------
+Starting a trial MTD to test settings
+-------------------------------------
+ Estimated runtime for one MTD (2.5 ps) on a single thread: 2 sec
+ Estimated runtime for a batch of 6 MTDs on 8 threads: 2 sec
+ 
+ list of Vbias parameters applied:
+$metadyn    0.00200   1.200
+$metadyn    0.00100   1.200
+$metadyn    0.00200   0.600
+$metadyn    0.00100   0.600
+$metadyn    0.00200   0.300
+$metadyn    0.00100   0.300
+ 
+*******************************************************************************************
+**                        N E W    I T E R A T I O N    C Y C L E                        **
+*******************************************************************************************
+ 
+========================================
+            MTD Iteration  1
+========================================
+ 
+     ========================================
+     |         Meta-MD (MTD) Sampling       |
+     ========================================
+ 
+Starting Meta-MD   1 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0060
+     Vbias exp α /bohr⁻²:    1.20
+Starting Meta-MD   2 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0030
+     Vbias exp α /bohr⁻²:    1.20
+Starting Meta-MD   3 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0060
+     Vbias exp α /bohr⁻²:    0.60
+Starting Meta-MD   4 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0030
+     Vbias exp α /bohr⁻²:    0.60
+Starting Meta-MD   5 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0060
+     Vbias exp α /bohr⁻²:    0.30
+Starting Meta-MD   6 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0030
+     Vbias exp α /bohr⁻²:    0.30
+*Meta-MTD 5 finished*
+*Meta-MTD 2 finished*
+*Meta-MTD 3 finished*
+*Meta-MTD 1 finished*
+*Meta-MTD 6 finished*
+*Meta-MTD 4 finished*
+ 
+-----------------------
+Multilevel Optimization
+-----------------------
+ 
+ -------------------------
+ 1. crude pre-optimization
+ -------------------------
+ Optimizing all 150 structures from file "crest_rotamers_0.xyz" ...
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150
+ done.
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 3 structures remain within   100.00 kcal/mol window
+ This is less than 5% of the initial 150 structures.
+ Increasing energy window to include more...
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 3 structures remain within   150.00 kcal/mol window
+ 
+ -------------------------------------
+ 2. optimization with tight thresholds
+ -------------------------------------
+ Optimizing all 4 structures from file "crest_rotamers_1.xyz" ...
+ 1 2 3 4
+ done.
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 2 structures remain within    50.00 kcal/mol window
+ 
+ 
+========================================
+            MTD Iteration  2
+========================================
+ 
+     ========================================
+     |         Meta-MD (MTD) Sampling       |
+     ========================================
+ 
+Starting Meta-MD   1 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0060
+     Vbias exp α /bohr⁻²:    1.20
+Starting Meta-MD   2 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0030
+     Vbias exp α /bohr⁻²:    1.20
+Starting Meta-MD   3 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0060
+     Vbias exp α /bohr⁻²:    0.60
+Starting Meta-MD   4 with the settings:
+     MD time /ps        :     2.5
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     dumpstep(Vbias)/ps :     1.0
+     Vbias factor k /Eh :  0.0030
+     Vbias exp α /bohr⁻²:    0.60
+*Meta-MTD 3 finished*
+*Meta-MTD 4 finished*
+*Meta-MTD 2 finished*
+*Meta-MTD 1 finished*
+ 
+-----------------------
+Multilevel Optimization
+-----------------------
+ 
+ -------------------------
+ 1. crude pre-optimization
+ -------------------------
+ Optimizing all 100 structures from file "crest_rotamers_0.xyz" ...
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100
+ done.
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 7 structures remain within   100.00 kcal/mol window
+ 
+ -------------------------------------
+ 2. optimization with tight thresholds
+ -------------------------------------
+ Optimizing all 8 structures from file "crest_rotamers_1.xyz" ...
+ 1 2 3 4 5 6 7 8
+ done.
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 2 structures remain within    50.00 kcal/mol window
+ 
+========================================
+            MTD Iterations done         
+========================================
+ Collecting ensmbles.
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 2 structures remain within    50.00 kcal/mol window
+ 
+     H(298.15K)-H(0) (conf)      0.000000
+                   Cp(conf)      0.000000
+                    S(conf)      0.000000
+ 
+******************************************************************************************
+**                          I T E R A T I O N    C Y C L E      1                       **
+******************************************************************************************
+ ---------------------------
+ determining bias structures
+ ---------------------------
+ There are not enough descriptors for a PCA!
+ Taking all structures as representative and writing crest_clustered.xyz
+ 2 structures were selected
+ done.
+
+ -------------------------------
+ determining MTD seed structures
+ -------------------------------
+ There are not enough descriptors for a PCA!
+ Taking all structures as representative and writing crest_clustered.xyz
+ 2 structures were selected
+ done.
+
+-----------------------------------------------
+Additional static MTDs on lowest 2 conformer(s)
+-----------------------------------------------
+Starting MTD   1 with the settings:
+     MD time /ps        :     1.2
+     MD Temperature /K  :   600.0
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     Vbias factor k /Eh :  0.0001
+     Vbias exp α /bohr⁻²:    1.00
+Starting MTD   4 with the settings:
+     MD time /ps        :     1.2
+     MD Temperature /K  :   600.0
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     Vbias factor k /Eh :  0.0003
+     Vbias exp α /bohr⁻²:    1.00
+*static MTD 1 finished*
+Starting MTD   2 with the settings:
+     MD time /ps        :     1.2
+     MD Temperature /K  :   600.0
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     Vbias factor k /Eh :  0.0003
+     Vbias exp α /bohr⁻²:    1.00
+*static MTD 4 finished*
+Starting MTD   3 with the settings:
+     MD time /ps        :     1.2
+     MD Temperature /K  :   600.0
+     dt /fs             :     1.5
+     dumpstep(trj) /fs  :     100
+     Vbias factor k /Eh :  0.0001
+     Vbias exp α /bohr⁻²:    1.00
+*static MTD 2 finished*
+*static MTD 3 finished*
+ Appending file crest_rotamers_0.xyz with new structures
+ 
+ -------------------------------------------
+ Ensemble optimization with loose thresholds
+ -------------------------------------------
+ Optimizing all 48 structures from file "crest_rotamers_0.xyz" ...
+ 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+ done.
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 3 structures remain within    83.00 kcal/mol window
+ 
+ -------------------------------------------
+ Ensemble optimization with tight thresholds
+ -------------------------------------------
+ Optimizing all 3 structures from file "crest_rotamers_2.xyz" ...
+ 1 2 3
+ done.
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 1 structures remain within    50.00 kcal/mol window
+ 
+ running RMSDs...
+ done.
+ E lowest :    -0.42745
+ 
+ Static MTD simulation iteration 1 finished
+ A total of 2 conformers (+ 0.00%) in crest_conformers.xyz
+ S(approx.) =   -0.000000 cal/molK (dS = 0.00%)
+ Convergence w.r.t. conformers:  T
+ Convergence w.r.t. entropy   :  T
+ 
+ input  file name : crest_rotamers_4.xyz
+ output file name : crest_rotamers_5.xyz
+ number of atoms                :   3
+ number of points on xyz files  :   3
+ RMSD threshold                 :   0.1250
+ Bconst threshold               :   0.0100
+ population threshold           :   0.0500
+ conformer energy window  /kcal :  50.0000
+ # fragment in coord            :     1
+ # bonds in reference structure :     2
+ number of reliable points      :     3
+ reference state Etot : -0.427454010000000
+ number of doubles removed by rot/RMSD         :           1
+ total number unique points considered further :           2
+       Erel/kcal        Etot weight/tot  conformer     set   degen     origin
+       1   0.000    -0.42745    1.00000    1.00000       1       1     mtd6
+       2  38.376    -0.36630    0.00000    0.00000       2       1     mtd5
+T /K                                  :   298.15
+E lowest                              :    -0.42745
+ensemble average energy (kcal)        :    0.000
+ensemble entropy (J/mol K, cal/mol K) :   -0.000   -0.000
+ensemble free energy (kcal/mol)       :    0.000
+population of lowest in %             :  100.000
+ number of unique conformers for further calc            2
+ list of relative energies saved as "crest.energies"
+ compare nuclear equivalencies ...
+::::::::::: conformer group all :::::::::::
+ chemical equivalencies (mag.active nuclei):
+ magnetic equivalencies:
+ 
+ -----------------
+ Wall Time Summary
+ -----------------
+             test MD wall time :         0h : 0m : 0s
+                 MTD wall time :         0h : 0m : 0s
+      multilevel OPT wall time :         0h : 0m : 7s
+          static MTD wall time :         0h : 0m : 0s
+--------------------
+Overall wall time  : 0h : 0m : 8s
+ 
+ CREST terminated normally.

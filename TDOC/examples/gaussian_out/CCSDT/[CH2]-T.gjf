@@ -1,0 +1,18 @@
+***,[CH2]-T
+nosym
+geometry={
+C        0.000000        0.000000        0.104203
+H        0.000000        0.994486       -0.312609
+H        0.000000       -0.994486       -0.312609
+}
+
+basis=vdz
+{rhf;occ,5;wf,8,1,2,state,1}
+uccsd(t)
+
+basis=vtz
+rhf
+uccsd(t)
+
+basis=vqz
+rhf

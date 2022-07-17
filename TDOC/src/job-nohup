@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for s in *.sh;
+do
+  dos2unix $s
+  chmod +x $s
+  nohup ./$s &
+done
+

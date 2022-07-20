@@ -143,7 +143,6 @@ class SUBMIT(PROJECT):
         newsmi = smi[:-2] if '-' in smi and smi[-1] in self.multiplicities else smi
         mol = Chem.AddHs(Chem.MolFromSmiles(newsmi))
         AllChem.EmbedMolecule(mol), AllChem.MMFFOptimizeMolecule(mol), Chem.MolToMolFile(mol, 'rdkit.mol'), system('obabel rdkit.mol -O rdkit.gjf')
-        exit()
         with open('input.txt', 'w') as f: f.write('{}\n{}\n{}\n{}\n{}\n{}'.format(newsmi, smi, self.number_process, structure_method, self.spin_method, self.key_words))
         system('python conformer.py >conformer.txt')
         remove('rdkit.mol'), remove('rdkit.gjf'), remove('input.txt'), remove('conformer.txt')

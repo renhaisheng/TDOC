@@ -22,7 +22,7 @@ For flexible larger molecules, the enthalpies of formation of larger molecules a
 6. SRC: Source code files.
 
 
-## Preparation
+## Preparation:
 
 Install software and add channel to environment variables on Windows platforms.
 1. Obtain conda by Anaconda or Miniconda (https://docs.conda.io/en/latest/) where the Python version is greater than 3.7.
@@ -41,7 +41,7 @@ Install essential packages in Linux platforms for high performance computing.
 Note: The operation on Windows system may also be replaced in Linux system by making minor modifications to source code. This program is open source and can be modified as required.
 
 
-## Usage
+## Usage:
 
 Before running  program, the smiles.txt file which contains SMILES of all species in the mechanism is required in main directory. Moreover, the input parameters can be modified in the input.ini file as needed. 
 

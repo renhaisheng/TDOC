@@ -4,13 +4,12 @@ Author: Huajie Xu, Zihan Xu, Lu Liu, Zerong Li, Quan Zhu, Haisheng Ren.
 Email: renhs@scu.edu.cn.
 Copyright: Center for Combustion Dynamics, Sichuan University.
 
+
 ## Characteristic:
 This program of TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy at CCSD(T)/CBS level with corrections of BAC. 
 TDOC can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
 
 For flexible larger molecules, the enthalpies of formation of larger molecules are derived by CBH-3 extrapolation with bond additivity corrections, dramatically decreasing computational costs. For aromatic molecules, the enthalpies of formation larger aromatic molecules are processed by the reservation of aromatic rings in CBH-3 rung, while the smaller aromatic molecules are directly calculated by CCSD(T)/CBS method by symmetry acceleration. The extremely large polycyclic aromatic molecules are limited for its too expensive calculations of aromatic rings. Combined the corrections of hindered rotor and conformational sampling, the calculated accuracy generally meets the requirements of chemical accuracy.
-
-
 
 
 ## Directories:
@@ -28,7 +27,6 @@ For flexible larger molecules, the enthalpies of formation of larger molecules a
 Install software and add channel to environment variables on Windows platforms.
 1. Obtain conda by Anaconda or Miniconda (https://docs.conda.io/en/latest/) where the Python version is greater than 3.7.
 2. Install OpenBabel 3.1 from from GitHub (https://github.com/openbabel/openbabel/releases/).
-3. Keep python3.2 in your shell if you want use Chemscript to generate conformers. The Chemscript is optional since confomers can also be built by OpenBabel or RdKit.
 
 The required modules are rdkit, utilspie, ase.
 1. Type "conda install -c rdkit rdkit" or "conda install -c conda-forge rdkit" to obtain rdkit.
@@ -41,6 +39,7 @@ Install essential packages in Linux platforms for high performance computing.
 3. For GFNFF conformers sampling, the CREST is available from GitHub (https://github.com/grimme-lab/crest). The required xtb binary may also be taken from GitHub (https://github.com/grimme-lab/xtb).
 
 Note: The operation on Windows system may also be replaced in Linux system by making minor modifications to source code. This program is open source and can be modified as required.
+
 
 ## Usage
 

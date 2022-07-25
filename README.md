@@ -1,5 +1,5 @@
 ## TDOC:
-TDOC:Thermodynamic Data Off-line Calculator 
+TDOC: Thermodynamic Data Off-line Calculator 
 
 Date: July 25, 2022.
 

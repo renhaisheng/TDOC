@@ -11,36 +11,25 @@ TDOC is developed to obtain accurate thermodynamic parameters of mechanisms with
 For flexible larger molecules, the enthalpies of formation of larger molecules are derived by CBH-3 extrapolation with bond additivity corrections, dramatically decreasing computational costs. For aromatic molecules, the enthalpies of formation larger aromatic molecules are processed by the reservation of aromatic rings in CBH-3 rung, while the smaller aromatic molecules are directly calculated by CCSD(T)/CBS method by symmetry acceleration. The extremely large polycyclic aromatic molecules are limited for its too expensive calculations of aromatic rings. Combined the corrections of hindered rotor and conformational sampling, the calculated accuracy generally meets the requirements of chemical accuracy.
 
 
-## Directories:
-
-1. preexisted-dat: Already existed thermodyamic paramters file which will not be calculated any more.
-2. chemkin_dat: Final thermodynamic paramters file for CHEMKIN format.
-3. gaussian_out: Input and output files of calculations for Linux system.
-4. program_out: Some viewable results of program output.
-5. submitted_inp: Submitted files to be calculated in Linux system.
-
 ## Preparation:
+1. Platform: Windows or Linux. Note that the Linux system is required to get QM calculations of Gaussian and Molpro.
+2. Environment: Conda with Python (>=3.7). Conda can be obtained by Anaconda or Miniconda (https://docs.conda.io/en/latest/).
+3. Modules: requirements.txt. Enter "conda install --yes -c conda-forge --file requirements.txt" or "python setup.py install".
+4. Extensions: Gaussian, Mopro, xtb, CREST packages. Gaussian and Mopro packages are indispensable to get optimized structure and singel point energies.
+   For conformational sampling, open-source CREST with xtb are available at https://github.com/grimme-lab/.
 
-Install software and add channel to environment variables on Windows platforms.
-1. Obtain conda by Anaconda or Miniconda (https://docs.conda.io/en/latest/) where the Python version is greater than 3.7.
-2. Install OpenBabel 3.1 from from GitHub (https://github.com/openbabel/openbabel/releases/).
 
-The required modules are rdkit, utilspie, ase.
-1. Type "conda install -c rdkit rdkit" or "conda install -c conda-forge rdkit" to obtain rdkit.
-2. Input "pip install utilspie ase" to install utilspie and ase modules.
-3. Use "conda" or "pip" command to install any vacant module.
-
-Install essential packages in Linux platforms for high performance computing.
-1. For M062X calculations, the Gaussian of g09 or g16 is required. You can change the  default word of "g09" to "g16" in submit.py file if you have Gaussian copyright of g16 version.  
-2. For CCSD(T) computation, the Molpro is indispensable.
-3. For GFNFF conformers sampling, the CREST is available from GitHub (https://github.com/grimme-lab/crest). The required xtb binary may also be taken from GitHub (https://github.com/grimme-lab/xtb).
-
-Note: The operation on Windows system may also be replaced in Linux system by making minor modifications to source code. This program is open source and can be modified as required.
+## setup
+Enter "python setup.py install" in conda shell for windows or bash shell for Linux.
 
 
 ## Usage:
+Enter "python tdoc.py smiles.txt -p parameters.py" in conda shell for windows or bash shell for Linux to automatically generate input scipts and files. Then copy these files to Linux platform for Gaussian, Molpro, and CREST calculations. Just input "chmod +x job-nohup && nohup ./job-nohup &" to run jobs. In particular, For a cluster of PBS, enter "chmod +x job-qsub && nohup ./job-qsub &" to start jobs. Finally, copy all output files to the directory of gaussian_out and repeat the previous steps until the all tasks are completed.
 
-Before running  program, the smiles.txt file which contains SMILES of all species in the mechanism is required in main directory. Moreover, the input parameters can be modified in the input.ini file as needed. 
 
-To run TDOC.py in main directory, you can type command of 'python  TDOC.py' in shell or operate directly in python interpreter. Or you can double click the TDOC.exe to complete the above operation.
-
+## Directories:
+1. preexisted-dat: Already existed dat files of thermodyamic paramters.
+2. chemkin_dat: Finally dat files of thermodynamic paramters for CHEMKIN format.
+3. gaussian_out: Input and output files of QM calculations for Linux system.
+4. program_out: Some viewable and summary analysis for all output results of TDOC.
+5. submitted_inp: Submitted scripts and files for QM calculations on Linux system.

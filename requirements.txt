@@ -1,0 +1,8 @@
+# All required python modules. Enter "python setup.py" in conda shell to install them.
+# Or you can install them by "conda install --yes -c conda-forge --file requirements.txt".
+
+rdkit
+ase
+scipy
+numpy
+openbabel>=3.1.1

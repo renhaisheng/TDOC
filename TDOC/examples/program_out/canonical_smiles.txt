@@ -1,2 +1,0 @@
-                       species                        smiles              canonical smiles
-                         C6H12                      C1CCCCC1                      C1CCCCC1

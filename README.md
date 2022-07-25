@@ -1,26 +1,23 @@
-TDOC: Thermodynamic Data Offline Calculator. 
-Date: March 20,2022.
+TDOC: Thermodynamic Data Off-line Calculator. 
+Date: July 25, 2022.
 Author: Huajie Xu, Zihan Xu, Lu Liu, Zerong Li, Quan Zhu, Haisheng Ren.
 Email: renhs@scu.edu.cn.
 Copyright: Center for Combustion Dynamics, Sichuan University.
 
 
 ## Characteristic:
-This program of TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy at CCSD(T)/CBS level with corrections of BAC. 
-TDOC can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
+TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy. It can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
 
 For flexible larger molecules, the enthalpies of formation of larger molecules are derived by CBH-3 extrapolation with bond additivity corrections, dramatically decreasing computational costs. For aromatic molecules, the enthalpies of formation larger aromatic molecules are processed by the reservation of aromatic rings in CBH-3 rung, while the smaller aromatic molecules are directly calculated by CCSD(T)/CBS method by symmetry acceleration. The extremely large polycyclic aromatic molecules are limited for its too expensive calculations of aromatic rings. Combined the corrections of hindered rotor and conformational sampling, the calculated accuracy generally meets the requirements of chemical accuracy.
 
 
 ## Directories:
 
-1. chemkin_dat: Final thermodynamic paramters file for CHEMKIN format.
-2. gaussian_out: Input and output files of calculations for Linux system.
-3. preexisted-dat: Already existed thermodyamic paramters file which will not be calculated any more.
+1. preexisted-dat: Already existed thermodyamic paramters file which will not be calculated any more.
+2. chemkin_dat: Final thermodynamic paramters file for CHEMKIN format.
+3. gaussian_out: Input and output files of calculations for Linux system.
 4. program_out: Some viewable results of program output.
 5. submitted_inp: Submitted files to be calculated in Linux system.
-6. SRC: Source code files.
-
 
 ## Preparation:
 

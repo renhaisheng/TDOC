@@ -15,7 +15,7 @@ For flexible larger molecules, the enthalpies of formation of larger molecules a
 1. Platform: Windows or Linux. Note that the Linux system is required to get QM calculations of Gaussian and Molpro.
 2. Environment: Conda with Python (>=3.7). Conda can be obtained by Anaconda or Miniconda (https://docs.conda.io/en/latest/).
 3. Modules: requirements.txt. Enter "conda install --yes -c conda-forge --file requirements.txt" or "python setup.py install".
-4. Extensions: Gaussian, Mopro, xtb, CREST packages. Gaussian and Mopro packages are indispensable to get optimized structure and singel point energies.
+4. Extensions: Gaussian, Mopro, xtb, CREST packages. Gaussian and Mopro packages are indispensable to get optimized structure and single point energies.
    For conformational sampling, open-source CREST with xtb are available at https://github.com/grimme-lab/.
 
 
@@ -24,12 +24,13 @@ Enter "python setup.py install" in conda shell for windows or bash shell for Lin
 
 
 ## Usage:
-Enter "python tdoc.py smiles.txt -p parameters.py" in conda shell for windows or bash shell for Linux to automatically generate input scipts and files. Then copy these files to Linux platform for Gaussian, Molpro, and CREST calculations. Just input "chmod +x job-nohup && nohup ./job-nohup &" to run jobs. In particular, For a cluster of PBS, enter "chmod +x job-qsub && nohup ./job-qsub &" to start jobs. Finally, copy all output files to the directory of gaussian_out and repeat the previous steps until the all tasks are completed.
+Enter "python tdoc.py smiles.txt -p parameters.py" in conda shell for windows or bash shell for Linux to automatically generate input scripts and files. Then copy these files to Linux platform for Gaussian, Molpro, and CREST calculations. Just input "chmod +x job-nohup && nohup ./job-nohup &" to run jobs. In particular, For a cluster of PBS, enter "chmod +x job-qsub && nohup ./job-qsub &" to start jobs. Finally, copy all output files to the directory of gaussian_out and repeat the previous steps until the all tasks are completed.
 
 
 ## Directories:
-1. preexisted-dat: Already existed dat files of thermodyamic paramters.
-2. chemkin_dat: Finally dat files of thermodynamic paramters for CHEMKIN format.
+1. preexisted-dat: Already existed dat files of thermodynamic parameters.
+2. chemkin_dat: Finally dat files of thermodynamic parameters for CHEMKIN format.
 3. gaussian_out: Input and output files of QM calculations for Linux system.
 4. program_out: Some viewable and summary analysis for all output results of TDOC.
 5. submitted_inp: Submitted scripts and files for QM calculations on Linux system.
+

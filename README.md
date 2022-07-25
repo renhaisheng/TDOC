@@ -11,7 +11,7 @@ Copyright: Center for Combustion Dynamics, Sichuan University.
 
 
 ## Characteristic:
-TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy. It can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
+TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy for CHO carbon hydrogen. It can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
 
 For flexible larger molecules, the enthalpies of formation of larger molecules are derived by CBH-3 extrapolation with bond additivity corrections, dramatically decreasing computational costs. For aromatic molecules, the enthalpies of formation larger aromatic molecules are processed by the reservation of aromatic rings in CBH-3 rung, while the smaller aromatic molecules are directly calculated by CCSD(T)/CBS method by symmetry acceleration. The extremely large polycyclic aromatic molecules are limited for its too expensive calculations of aromatic rings. Combined the corrections of hindered rotor and conformational sampling, the calculated accuracy generally meets the requirements of chemical accuracy.
 
@@ -29,12 +29,16 @@ Enter "python setup.py install" in conda shell for windows or bash shell for Lin
 
 
 ## Usage:
-Enter "python tdoc.py smiles.txt -p parameters.py" in conda shell for windows or bash shell for Linux to automatically generate input scripts and files. Then copy these files to Linux platform for Gaussian, Molpro, and CREST calculations. Just input "chmod +x job-nohup && nohup ./job-nohup &" to run jobs. In particular, For a cluster of PBS, enter "chmod +x job-qsub && nohup ./job-qsub &" to start jobs. Finally, copy all output files to the directory of gaussian_out and repeat the previous steps until the all tasks are completed.
+1. Enter "python tdoc.py smiles.txt -p parameters.py" in conda shell for windows or bash shell for Linux to automatically generate input scripts and files. 
+2. Copy these files to Linux platform for Gaussian, Molpro, and CREST calculations. Just input "chmod +x job-nohup && nohup ./job-nohup &" to run jobs.
+   In particular, enter "chmod +x job-qsub && nohup ./job-qsub &" to start jobs for a cluster of PBS.
+3. Copy all output files to the directory of gaussian_out.
+4. Repeat previous steps until the all tasks are completed.
 
 
 ## Directories:
-1. preexisted-dat: Already existed dat files of thermodynamic parameters.
-2. chemkin_dat: Finally dat files of thermodynamic parameters for CHEMKIN format.
+1. preexisted-dat: Thermodynamic data files for bath gas, such as Ar, N2 and so on.
+2. chemkin_dat: Generated thermodynamic data files with CHEMKIN format by TDOC.
 3. gaussian_out: Input and output files of QM calculations for Linux system.
 4. program_out: Some viewable and summary analysis for all output results of TDOC.
 5. submitted_inp: Submitted scripts and files for QM calculations on Linux system.

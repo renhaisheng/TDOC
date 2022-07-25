@@ -1,11 +1,7 @@
 TDOC: Thermodynamic Data Off-line Calculator. 
-
 Date: July 25, 2022.
-
 Author: Huajie Xu, Zihan Xu, Lu Liu, Zerong Li, Quan Zhu, Haisheng Ren.
-
 Email: renhs@scu.edu.cn.
-
 Copyright: Center for Combustion Dynamics, Sichuan University.
 
 

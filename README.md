@@ -11,9 +11,15 @@ Copyright: Center for Combustion Dynamics, Sichuan University.
 
 
 ## Characteristic:
-TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy for CHO carbon hydrogen. It can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
+TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy for CHO carbon hydrogen. It can automatically build
+input files and deal with occurred errors, such as spin contaminations, imaginary frequencies, multireference effects, and so on. After all errors are
+eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
 
-For flexible larger molecules, the enthalpies of formation of larger molecules are derived by CBH-3 extrapolation with bond additivity corrections, dramatically decreasing computational costs. For aromatic molecules, the enthalpies of formation larger aromatic molecules are processed by the reservation of aromatic rings in CBH-3 rung, while the smaller aromatic molecules are directly calculated by CCSD(T)/CBS method by symmetry acceleration. The extremely large polycyclic aromatic molecules are limited for its too expensive calculations of aromatic rings. Combined the corrections of hindered rotor and conformational sampling, the calculated accuracy generally meets the requirements of chemical accuracy.
+For flexible larger molecules, the enthalpies of formation of larger molecules are derived by CBH-3 extrapolation with bond additivity corrections, 
+dramatically decreasing computational costs. For aromatic molecules, the enthalpies of formation larger aromatic molecules are processed by the 
+reservation of aromatic rings in CBH-3 rung, while the smaller aromatic molecules are directly calculated by CCSD(T)/CBS method by symmetry acceleration.
+The extremely large polycyclic aromatic molecules are limited for its too expensive calculations of aromatic rings. Combined the corrections of hindered 
+rotor and conformational sampling, the calculated accuracy generally meets the requirements of chemical accuracy.
 
 
 ## Preparation:

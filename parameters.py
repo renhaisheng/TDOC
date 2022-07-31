@@ -38,7 +38,7 @@ input_parameters(
     submitted_type = 1,
     calculated_method = 1,
     conformer_method = 1,
-    gaussian_version= 'g09',
+    gaussian_version= 'g16',
     aro_rings = ['C12=CC=CC=C1C=CC=C2','C1=CC=CC=C1','C1=COC=C1'],
     key_words = '# opt freq=hinderedrotor M062X/6-311++g(d,p) symm=veryloose',
 )

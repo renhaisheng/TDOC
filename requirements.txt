@@ -1,5 +1,4 @@
-# All required python modules. Enter "python setup.py" in conda shell to install them.
-# Or you can install them by "conda install --yes -c conda-forge --file requirements.txt".
+# All required python modules via "conda install --yes -c conda-forge --file requirements.txt".
 
 rdkit
 ase

@@ -9,6 +9,8 @@ Email: renhs@scu.edu.cn.
 
 Copyright: Center for Combustion Dynamics, Sichuan University.
 
+Cite: 10.1016/j.fuel.2022.125431
+
 
 ## Characteristic:
 TDOC is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy for CHO carbon hydrogen.

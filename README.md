@@ -37,7 +37,8 @@ accuracy generally meets the requirements of chemical accuracy.
 ## Setup
 1. Unpack "tdoc-1.0.tar.gz" or "tdoc-1.0.zip" file and enter the main directory of "tdoc-1.0".
 2. Enter "conda install --yes -c conda-forge --file requirements.txt" to install required modules.
-3. Add the main directory to system environment. Especially, enter "chmod +x tdoc.py" to make a excutable file for Linux system. 
+3. Add the main directory to system environment. For Linux system, the TDOC.py file needs key words of ':set ff=unix' in vim editor 
+   to convert dos to unix. Additionally, enter "chmod +x tdoc.py" to make an excutable file in Linux shell. 
 
 
 ## Usage:

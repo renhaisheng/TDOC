@@ -41,7 +41,7 @@ accuracy generally meets the requirements of chemical accuracy.
 
 
 ## Usage:
-1. Enter "tdoc smiles.txt -p parameters.py" in another directory to automatically generate input scripts and files. 
+1. Enter "tdoc.py smiles.txt -p parameters.py" in another directory to automatically generate input scripts and files. 
 2. Copy submitted files in the newly generated "submitted_inp" directory to Linux platform for Gaussian, Molpro, and CREST calculations.
 3. Input "chmod +x job-nohup && nohup ./job-nohup &" to run jobs. In particular, enter "chmod +x job-qsub && nohup ./job-qsub &" 
    to start jobs for a cluster of PBS.

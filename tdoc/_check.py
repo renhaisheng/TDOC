@@ -51,7 +51,7 @@ class Check(object):
 
                 # Process the problem of internal coordinates.
                 elif 'Linear angle in Tors' in endinfo or 'FormBX had a problem' in endinfo:
-                    if 'cartesian' not in res:
+                    if 'cartesian' not in lines:
                         print('Processed: Change cartesian optimazition.\n')
                         lines[2] = lines[2].replace('opt ', 'opt=cartesian ').replace('opt=tight', 'opt=(tight,cartesian)')
                         with open(smi + '.gjf', 'w') as f:

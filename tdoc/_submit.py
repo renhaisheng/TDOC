@@ -39,7 +39,7 @@ class Submit(object):
         # Construct input files of M062X for Gaussian.
         for smi in smiles:
             if smi + '.gjf' not in listdir('.'):
-                self.build_structure_from_smi(smi, self.para, self.para['conformer_method'])
+                self.build_structure_from_smi(smi, self.para['conformer_method'])
                 print('This molecule has been constructed: {}'.format(smi))
         
         # Generate submitted scripts.
@@ -191,7 +191,7 @@ class Submit(object):
 
  
     """ To construct 3D coordinates from SMILES. """
-    def build_structure_from_smi(self, smi, para, structure_method = 1):
+    def build_structure_from_smi(self, smi, structure_method = 1):
 
         # Build conformational structure.
         print('\nThis molecule of structure is being constructed: {}'.format(smi))

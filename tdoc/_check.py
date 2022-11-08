@@ -93,7 +93,7 @@ class Check(object):
                         structure_method = 1 if '_' not in lines else int(lines[4][-2])
                         if structure_method == 1: 
                             print('Processed: Change conformer construction.\n')
-                            tdoc._submit.Submit.build_structure_from_smi(smi, self.para, 2)
+                            tdoc._submit.Submit(self.para).build_structure_from_smi(smi, 2)
                             print('\nThis molecule has been constructed: {}'.format(smi))
                         else: 
                             manually_process.append(smi)
@@ -104,7 +104,7 @@ class Check(object):
                     structure_method = 1 if '_' not in lines else int(lines[4][-2])
                     if structure_method == 1:
                         print('Processed: Change conformer construction.\n')
-                        tdoc._submit.Submit.build_structure_from_smi(smi, self.para, 2)
+                        tdoc._submit.Submit(self.para).build_structure_from_smi(smi, 2)
                     else:
                         manually_process.append(smi)
                         print('Please manually choose applicable key words to elimate error for {}\n'.format(smi))

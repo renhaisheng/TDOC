@@ -51,7 +51,7 @@ class Check(object):
 
                 # Process the problem of internal coordinates.
                 elif 'Linear angle in Tors' in endinfo or 'FormBX had a problem' in endinfo:
-                    if 'cartesian' not in lines:
+                    if 'cartesian' not in lines[2]:
                         print('Processed: Change to cartesian optimazition.\n')
                         lines[2] = lines[2].replace('opt ', 'opt=cartesian ').replace('opt=tight', 'opt=(tight,cartesian)')
                         with open(smi + '.gjf', 'w') as f:
@@ -90,7 +90,7 @@ class Check(object):
                         with open(smi + '.gjf', 'w') as f:
                             f.write(''.join(lines))
                     else:
-                        structure_method = 1 if '_' not in lines else int(lines[4][-2])
+                        structure_method = 1 if '_' not in lines[4] else int(lines[4][-2])
                         if structure_method == 1: 
                             print('Processed: Change to conformer construction.\n')
                             tdoc._submit.Submit(self.para).build_structure_from_smi(smi, 2)
@@ -101,7 +101,7 @@ class Check(object):
                     
                 # Process the problem of bad 3D structure.
                 elif 'l202' in endinfo:
-                    structure_method = 1 if '_' not in lines else int(lines[4][-2])
+                    structure_method = 1 if '_' not in lines[4] else int(lines[4][-2])
                     if structure_method == 1:
                         print('Processed: Change to conformer construction.\n')
                         tdoc._submit.Submit(self.para).build_structure_from_smi(smi, 2)

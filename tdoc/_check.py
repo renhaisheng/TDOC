@@ -372,7 +372,7 @@ class Check(object):
         
         # Remove redundant files and determine finished molecules.
         print('\nCheck calculations of {} ...\n'.format(self.method))
-        redundant_files = array([glob('*.chk'), glob('job*'), glob('nohup.out'), glob('fort.7'), glob('molpro*')]).flatten()
+        redundant_files = glob('*.chk') + glob('job*') + glob('nohup.out') + glob('fort.7') + glob('molpro*')
         for file in redundant_files: remove(file)
         finished_smiles = [smi for smi in self.smiles if smi + '.out' in listdir('.')]
         

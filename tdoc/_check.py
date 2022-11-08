@@ -52,7 +52,7 @@ class Check(object):
                 # Process the problem of internal coordinates.
                 elif 'Linear angle in Tors' in endinfo or 'FormBX had a problem' in endinfo:
                     if 'cartesian' not in lines:
-                        print('Processed: Change cartesian optimazition.\n')
+                        print('Processed: Change to cartesian optimazition.\n')
                         lines[2] = lines[2].replace('opt ', 'opt=cartesian ').replace('opt=tight', 'opt=(tight,cartesian)')
                         with open(smi + '.gjf', 'w') as f:
                             f.write(''.join(lines))
@@ -92,7 +92,7 @@ class Check(object):
                     else:
                         structure_method = 1 if '_' not in lines else int(lines[4][-2])
                         if structure_method == 1: 
-                            print('Processed: Change conformer construction.\n')
+                            print('Processed: Change to conformer construction.\n')
                             tdoc._submit.Submit(self.para).build_structure_from_smi(smi, 2)
                             print('\nThis molecule has been constructed: {}'.format(smi))
                         else: 
@@ -103,7 +103,7 @@ class Check(object):
                 elif 'l202' in endinfo:
                     structure_method = 1 if '_' not in lines else int(lines[4][-2])
                     if structure_method == 1:
-                        print('Processed: Change conformer construction.\n')
+                        print('Processed: Change to conformer construction.\n')
                         tdoc._submit.Submit(self.para).build_structure_from_smi(smi, 2)
                     else:
                         manually_process.append(smi)

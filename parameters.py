@@ -31,7 +31,7 @@
 """
 
 input_parameters(
-    number_task = 1,
+    number_task = 4,
     number_process = 8,
     submitted_type = 1,
     conformer_method = 1,

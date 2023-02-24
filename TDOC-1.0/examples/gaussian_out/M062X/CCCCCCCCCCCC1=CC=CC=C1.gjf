@@ -1,0 +1,281 @@
+%nprocshared=8
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# opt freq=hinderedrotor M062X/6-311++g(d,p) symm=veryloose press=0.987
+
+CCCCCCCCCCCC1=CC=CC=C1_1
+
+0  1
+C           1.03997         0.00679         0.08521
+C           2.55644        -0.00001         0.08016
+C           3.08198        -1.14689        -0.77187
+C           4.60248        -1.15540        -0.77814
+C           5.11572        -2.30353        -1.63108
+C           6.63374        -2.31053        -1.63659
+C           7.14153        -3.45760        -2.49059
+C           8.65759        -3.46193        -2.49942
+C           9.16590        -4.60410        -3.36058
+C          10.68289        -4.59583        -3.36565
+C          11.21662        -5.74215        -4.21333
+C          12.71959        -5.78614        -4.20316
+C          13.43565        -5.77639        -5.40612
+C          14.82216        -5.92340        -5.39079
+C          15.50424        -6.02211        -4.18072
+C          14.80266        -5.99441        -2.97698
+C          13.41509        -5.89355        -2.99244
+H           0.66687         0.83158         0.69797
+H           0.64976        -0.93091         0.49367
+H           0.64977         0.12714        -0.93049
+H           2.92714        -0.09808         1.10717
+H           2.92715         0.95495        -0.31023
+H           2.70992        -1.04998        -1.79935
+H           2.70988        -2.10263        -0.38248
+H           4.98091        -1.25708         0.24637
+H           4.98090        -0.20387        -1.17133
+H           4.74122        -2.20461        -2.65747
+H           4.74138        -3.25772        -1.24013
+H           7.01197        -2.41217        -0.61186
+H           7.01135        -1.35816        -2.02882
+H           6.76387        -3.35751        -3.51548
+H           6.76808        -4.41132        -2.09782
+H           9.03655        -3.56699        -1.47489
+H           9.03334        -2.50670        -2.88644
+H           8.78460        -4.50462        -4.38366
+H           8.79843        -5.55956        -2.96563
+H          11.03438        -4.67685        -2.33024
+H          11.05524        -3.63814        -3.75087
+H          10.83997        -5.64202        -5.23902
+H          10.84290        -6.70262        -3.83633
+H          12.91920        -5.66739        -6.35562
+H          15.36873        -5.97150        -6.32946
+H          16.58527        -6.12489        -4.17087
+H          15.32741        -6.06905        -2.03065
+H          12.87810        -5.90550        -2.04569
+
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=200 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=250 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=300 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=350 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=400 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=450 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=500 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=550 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=600 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=650 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=700 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=750 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=800 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=850 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=900 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=950 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1000 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1100 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1200 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1300 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1400 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1500 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1600 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1700 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1800 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=1900 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2000 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2100 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2200 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2300 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2400 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2500 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2600 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2700 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2800 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=2900 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3000 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3100 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3200 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3300 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3400 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3500 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3600 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3700 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3800 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=3900 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4000 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4100 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4200 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4300 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4400 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4500 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4600 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4700 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4800 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=4900 press=0.987 geom=allcheck guess=read
+
+--Link1--
+%chk=CCCCCCCCCCCC1=CC=CC=C1.chk
+# freq=(readfc,hinderedrotor) temp=5000 press=0.987 geom=allcheck guess=read

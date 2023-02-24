@@ -27,7 +27,8 @@ class CBH(object):
 
     """ To get right term of CBH0. """
     def CBH0_Counter(self, smi):
-        newsmi = smi[4:] if smi.startswith('cis-') else smi
+        newsmi = ''.join(smi[:-2]) if '-' in smi and smi[-1] in self.para['multiplicities'] else smi
+        newsmi = newsmi[4:] if newsmi.startswith('cis-') else newsmi
         smiles, mol = [], Chem.MolFromSmiles(newsmi)
         if mol.GetNumHeavyAtoms() <= 1: return Counter([smi])
         for x in mol.GetAtoms():
@@ -38,7 +39,8 @@ class CBH(object):
 
     """ To get right term of CBH1. """
     def CBH1_Counter(self, smi):
-        newsmi = smi[4:] if smi.startswith('cis-') else smi
+        newsmi = ''.join(smi[:-2]) if '-' in smi and smi[-1] in self.para['multiplicities'] else smi
+        newsmi = newsmi[4:] if newsmi.startswith('cis-') else newsmi
         smiles, mol = [], Chem.MolFromSmiles(newsmi)
         if mol.GetNumHeavyAtoms() <= 2: return Counter([smi])
         if mol.GetAromaticAtoms(): Chem.Kekulize(mol, clearAromaticFlags = True)
@@ -57,7 +59,8 @@ class CBH(object):
 
     """ To get right term of CBH2. """
     def CBH2_Counter(self, smi):
-        newsmi = smi[4:] if smi.startswith('cis-') else smi
+        newsmi = ''.join(smi[:-2]) if '-' in smi and smi[-1] in self.para['multiplicities'] else smi
+        newsmi = newsmi[4:] if newsmi.startswith('cis-') else newsmi
         smiles, mol = [], Chem.MolFromSmiles(newsmi)
         if mol.GetNumHeavyAtoms() <= 3: return Counter([smi])
         if mol.GetAromaticAtoms(): Chem.Kekulize(mol, clearAromaticFlags = True)
@@ -76,7 +79,8 @@ class CBH(object):
 
     """ To get right term of CBH3. """
     def CBH3_Counter(self, smi):
-        newsmi=smi[4:] if smi.startswith('cis-') else smi
+        newsmi = ''.join(smi[:-2]) if '-' in smi and smi[-1] in self.para['multiplicities'] else smi
+        newsmi = newsmi[4:] if newsmi.startswith('cis-') else newsmi
         smiles, mol = [], Chem.MolFromSmiles(newsmi)
         AllChem.Compute2DCoords(mol)
         if mol.GetNumHeavyAtoms() <= 4: return Counter([smi])

@@ -1,0 +1,18 @@
+***,[CH2]-T
+memory,250,m
+geometry={
+C        0.000000       -0.000000        0.106728
+H        0.000000       -0.993920       -0.320183
+H        0.000000        0.993920       -0.320183
+}
+
+basis=vdz
+{rhf;maxit,100;wf,8,spin,2,charge,0,state,1}
+{rccsd(t);maxit,100}
+
+basis=vtz
+{rhf;maxit,100;wf,8,spin,2,charge,0,state,1}
+{rccsd(t);maxit,100}
+
+basis=vqz
+{rhf;maxit,100;wf,8,spin,2,charge,0,state,1}

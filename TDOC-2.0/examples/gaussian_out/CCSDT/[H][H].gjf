@@ -1,0 +1,17 @@
+***,[H][H]
+memory,150,m
+geometry={
+H        0.000000        0.000000        0.371396
+H        0.000000        0.000000       -0.371396
+}
+
+basis=vdz
+{hf;wf,2,spin,0,charge,0,state,1,maxit,100}
+{ccsd(t);maxit,100}
+
+basis=vtz
+hf
+ccsd(t)
+
+basis=vqz
+hf

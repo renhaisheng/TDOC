@@ -1,0 +1,6 @@
+species	smiles	canonical smiles
+H2	[H][H]	[H][H]
+CH2	[CH2]-T	[CH2]-T
+n-C5H12	CCCCC	CCCCC
+n-C12H26	CCCCCCCCCCCC	CCCCCCCCCCCC
+n-dodecylbenzene	CCCCCCCCCCCCC1=CC=CC=C1	CCCCCCCCCCCCc1ccccc1

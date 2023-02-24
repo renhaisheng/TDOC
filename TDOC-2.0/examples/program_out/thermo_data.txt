@@ -1,0 +1,7 @@
+T: 298.15K,  Hf: kcal/mol,  S: cal/mol/K,  Cp: cal/mol/K
+                       species	                                                      smiles	              Hf_MP2            Hf_CCSDT                   S                  Cp
+                            H2	                                                      [H][H]	                9.07                0.00               31.16                6.96
+                           CH2	                                                     [CH2]-T	              121.76              102.18               45.26                8.04
+                       n-C5H12	                                                       CCCCC	               23.08              -34.89               83.83               28.77
+                      n-C12H26	                                                CCCCCCCCCCCC	               56.02              -69.74              150.59               66.43
+              n-dodecylbenzene	                                        CCCCCCCCCCCCc1ccccc1	              101.69              -43.57              177.57               86.51

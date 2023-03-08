@@ -75,6 +75,7 @@ class Conformer(object):
         else:
             spin = self.rdkit_to_gjf().split('\n')[5][-1]
             newsmi = self.smi[:-2] if '-' in self.smi and self.smi[-1] in self.para['multiplicities'] else self.smi
+            newsmi = Chem.MolToSmiles(Chem.MolFromSmiles(newsmi), kekuleSmiles = True)
             mol = pybel.readstring('smi', newsmi)
             mol.make3D()
             gjf = mol.write('gjf').split('\n')

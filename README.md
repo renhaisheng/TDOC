@@ -13,7 +13,7 @@ Cite: 10.1016/j.fuel.2022.125431
 
 
 ## Characteristic:
-TDOC-2.0 is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy for CHO carbon hydrogen.
+TDOC-2.0 is developed to obtain accurate thermodynamic parameters of mechanisms within chemical accuracy for C/H/O hydrocarbons.
 It can automatically build input files and deal with occurred errors, such as spin contaminations, imaginary frequencies and so on.
 After all errors are eliminated, the accurate thermodynamic data will be generated in the format of 14 parameters for Chemkin use.
 

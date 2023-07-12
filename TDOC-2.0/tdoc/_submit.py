@@ -199,7 +199,7 @@ class Submit(object):
                 for i, v in enumerate(chunks(sample(xyz, len(xyz)), ceil(len(xyz) / self.para['number_task']))):
                     with open('{}/submitted_inp/GFNFF/job{}.sh'.format(self.para['work_path'], i + 1), 'w', newline = '\n') as p:
                         p.write('#!/bin/bash\n\n')
-                        if self.para['submitted_shell'] == 2:
+                        if self.para['submitted_type'] == 2:
                             f.write('mkdir {0}\ncp job{0}.sh {0}\ncp {1} {0}\ncd {0}\nqsub *.sh\ncd ..\n\n'.format(i + 1, ' '.join(v)))
                             p.write('#PBS -N {}-job{}\n#PBS -l nodes=1:ppn={}\n#PBS -q medium\n#PBS -j eo\ncd $PBS_O_WORKDIR\n\n'.format(method, i + 1, self.para['number_process']))
                             for x in v:
@@ -232,7 +232,7 @@ class Submit(object):
             for i, v in enumerate(chunks(sample(gjf, len(gjf)), ceil(len(gjf) / self.para['number_task']))):
                 with open('{}/submitted_inp/{}/job{}.sh'.format(self.para['work_path'], method, i + 1), 'w', newline = '\n') as f:
                     f.write('#!/bin/bash\n\n')
-                    if self.para['submitted_type'] == '2':
+                    if self.para['submitted_type'] == 2:
                         f.write('#PBS -N {}-job{}\n#PBS -l nodes=1:ppn={}\n#PBS -q medium\n#PBS -j eo\ncd $PBS_O_WORKDIR\n\n'.format(method, i + 1, self.para['number_process']))
                         for x in v: f.write('{} <{} >{}\nwait\n'.format(self.para['gaussian_version'], x, x.replace('gjf', 'out')))
                     else:

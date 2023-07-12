@@ -201,7 +201,7 @@ class Submit(object):
                         p.write('#!/bin/bash\n\n')
                         if self.para['submitted_type'] == 2:
                             f.write('mkdir {0}\ncp job{0}.sh {0}\ncp {1} {0}\ncd {0}\nqsub *.sh\ncd ..\n\n'.format(i + 1, ' '.join(v)))
-                            p.write('#PBS -N {}-job{}\n#PBS -l nodes=1:ppn={}\n#PBS -q medium\n#PBS -j eo\ncd $PBS_O_WORKDIR\n\n'.format(method, i + 1, self.para['number_process']))
+                            p.write('#PBS -N {}-job{}\n#PBS -l nodes=1:ppn={}\n#PBS -j eo\ncd $PBS_O_WORKDIR\n\n'.format(method, i + 1, self.para['number_process']))
                             for x in v:
                                 smi = x[:-4] if x[0] != '\'' else x[1:-5]
                                 with open('../B3LYP/' + smi + '.gjf') as q: charge, spin = map(int, findall('\n\n(-*\d)\s+(\d)\s*\n', q.read())[0])
@@ -221,7 +221,7 @@ class Submit(object):
                 with open('{}/submitted_inp/{}/job{}.sh'.format(self.para['work_path'], method, i + 1), 'w', newline = '\n') as f:
                     f.write('#!/bin/bash\n\n')
                     if self.para['submitted_type'] == 2:
-                        f.write('#PBS -N {}-job{}\n#PBS -l nodes=1:ppn={}\n#PBS -q medium\n#PBS -j eo\ncd $PBS_O_WORKDIR\n\n'.format(method, i + 1, self.para['number_process']))
+                        f.write('#PBS -N {}-job{}\n#PBS -l nodes=1:ppn={}\n#PBS -j eo\ncd $PBS_O_WORKDIR\n\n'.format(method, i + 1, self.para['number_process']))
                         for x in v: f.write('molpro -n {} <{} >{}\nwait\nsleep 3'.format(self.para['number_process'], x, x.replace('gjf', 'out')))
                     else:
                         for x in v: f.write('nohup molpro -n {} <{} >{} &\nwait\nsleep 5\n'.format(self.para['number_process'], x, x.replace('gjf', 'out')))
@@ -233,7 +233,7 @@ class Submit(object):
                 with open('{}/submitted_inp/{}/job{}.sh'.format(self.para['work_path'], method, i + 1), 'w', newline = '\n') as f:
                     f.write('#!/bin/bash\n\n')
                     if self.para['submitted_type'] == 2:
-                        f.write('#PBS -N {}-job{}\n#PBS -l nodes=1:ppn={}\n#PBS -q medium\n#PBS -j eo\ncd $PBS_O_WORKDIR\n\n'.format(method, i + 1, self.para['number_process']))
+                        f.write('#PBS -N {}-job{}\n#PBS -l nodes=1:ppn={}\n#PBS -j eo\ncd $PBS_O_WORKDIR\n\n'.format(method, i + 1, self.para['number_process']))
                         for x in v: f.write('{} <{} >{}\nwait\n'.format(self.para['gaussian_version'], x, x.replace('gjf', 'out')))
                     else:
                         for x in v: f.write('nohup {} <{} >{} &\nwait\n'.format(self.para['gaussian_version'], x, x.replace('gjf', 'out')))

@@ -62,7 +62,7 @@ class Conformer(object):
         gjf = mol.write('gjf').split('\n')
         gjf[3] = self.smi + '_' + str(self.structure_method)
         if '-' in self.smi and self.smi[-1] in self.para['multiplicities']:
-            gjf[5] = gjf[5][:-1] + str(self.structure_method)
+            gjf[5] = gjf[5][:-1] + str(self.para['multiplicities'][self.smi[-1])
         gjf = '\n'.join(gjf)
         return gjf
 

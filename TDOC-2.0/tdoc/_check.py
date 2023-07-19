@@ -159,7 +159,7 @@ class Check(object):
                     opt_level = findall(' (\w+?)/',lines[2])[0]
                     print('\nSpin contamination exceeds 10% of S**2: {0}\nProcessed: Change {1} to RO{1}.\n'.format(smi, opt_level))
                     lines=''.join(lines).replace('{}'.format(opt_level), 'RO{}'.format(opt_level))
-                    with open(smi + '.gjf') as f:
+                    with open(smi + '.gjf', 'w') as f:
                         f.write(lines)
             
         # Show manually processed molecules.

@@ -2,7 +2,7 @@
 #######################################  Basic parameters  ######################################
 #                                                                                               #
 #  The input_parameters should be modified according to computer configuration or user's demand.#
-#  The default_parameters should not be changed except for H_atoms of 'M062X' which should keep #
+#  The default_parameters should not be changed except for H_atoms of 'MP2' which should keep   #
 #  pace with the used method of key_words in input_parameters.                                  #
 #                                                                                               #
 #################################################################################################
@@ -18,7 +18,7 @@
 *                                                                                               *
 *************************************************************************************************
 
-***************************************  input_parameters  **************************************
+**************************************  default_parameters  *************************************
 *                                                                                               *
 *   multiplicities: The spin multiplicities in smiles to classify different species.            *
 *   submitted_scripts: The submitted scripts to run jobs on the Linux system.                   *

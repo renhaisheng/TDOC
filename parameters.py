@@ -36,7 +36,7 @@ input_parameters(
     submitted_type = 1,
     conformer_method = 1,
     gaussian_version= 'g16',
-    key_words = '# opt freq=hinderedrotor B3LYP/6-31g(d,p) symm=veryloose',
+    key_words = '# opt freq=hinderedrotor B3LYP/6-31g(d,p) symm=veryloose em=gd3bj',
     zpe_scale = 0.9838
 )
 

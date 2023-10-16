@@ -89,7 +89,7 @@ class Check(object):
                     else:
                         structure_method = 1 if '_' not in lines[4] else int(lines[4][-2])
                         if structure_method == 1: 
-                            print('Processed: Change to conformer construction.\n')
+                            print('Processed: Change conformer construction.\n')
                             tdoc._submit.Submit(self.para).build_structure_from_smi(smi, 2)
                             print('\nThis molecule has been constructed: {}'.format(smi))
                         elif 'cartesian' not in lines[2]:
@@ -105,7 +105,7 @@ class Check(object):
                 elif 'l202' in endinfo:
                     structure_method = 1 if '_' not in lines[4] else int(lines[4][-2])
                     if structure_method == 1:
-                        print('Processed: Change to conformer construction.\n')
+                        print('Processed: Change conformer construction.\n')
                         tdoc._submit.Submit(self.para).build_structure_from_smi(smi, 2)
                     else:
                         manually_process.append(smi)

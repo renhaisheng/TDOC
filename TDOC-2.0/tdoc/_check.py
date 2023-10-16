@@ -17,7 +17,7 @@ class Check(object):
 
 
     
-    """ To check M062X calculations. """
+    """ To check B3LYP calculations. """
     def check_B3LYP_out(self, finished_smiles):
         manually_process = []
         for smi in finished_smiles:
